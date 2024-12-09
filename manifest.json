@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Inflearn Extenstions",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "popup/hello_extensions.png"
+  },
+  "permissions": ["storage", "activeTab"],
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": ["libs/jquery-3.6.0.min.js", "scripts/common/utils.js"],
+      "matches": [
+        "https://www.inflearn.com/course/lecture*"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "js": ["scripts/player.js"],
+      "matches": [
+        "https://www.inflearn.com/course/lecture*"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
