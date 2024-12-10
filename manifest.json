@@ -13,14 +13,14 @@
       "all_frames": true,
       "js": ["libs/jquery-3.6.0.min.js", "scripts/common/utils.js"],
       "matches": [
-        "https://www.inflearn.com/course/lecture*"
+        "https://www.inflearn.com/course*/lecture*"
       ],
       "run_at": "document_end"
     },
     {
       "js": ["scripts/player.js"],
       "matches": [
-        "https://www.inflearn.com/course/lecture*"
+        "https://www.inflearn.com/course*/lecture*"
       ],
       "run_at": "document_end"
     }
